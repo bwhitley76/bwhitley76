@@ -1,9 +1,5 @@
 # Pre-Requisites
 echo validating pre-requisites
-az extension add --name azure-firewall 
-# or updating AzFirewall CLI extensions
-az extension update --name azure-firewall
-
 # Parameters (make changes based on your requirements)
 region1=usgovvirginia
 region2=usgovtexas
@@ -11,12 +7,10 @@ rg=lab-hub-peering
 username=azureuser
 password="Msft123Msft123" #Please change your password
 vmsize=Standard_B1s
-
 #Variables
 mypip=$(curl -4 ifconfig.io -s)
 
 az group create -n $rg -l $region1 --output none
-
 echo Creating On-Prem Site VNETs...
 # Creating On-prem Site1 virtual network
 az network vnet create --address-prefixes 10.100.0.0/16 -n site1 -g $rg -l $region1 --subnet-name main --subnet-prefixes 10.100.0.0/24 --output none
