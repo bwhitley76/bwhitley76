@@ -5,8 +5,8 @@ az extension add --name azure-firewall
 az extension update --name azure-firewall
 
 # Parameters (make changes based on your requirements)
-region1=USGovVirginia
-region2=USGovTexas
+region1=usgovvirginia
+region2=usgovtexas
 rg=lab-hub-peering
 username=azureuser
 password="Msft123Msft123" #Please change your password
