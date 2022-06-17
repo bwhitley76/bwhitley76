@@ -9,7 +9,6 @@ password="Msft123Msft123" #Please change your password
 vmsize=Standard_B1s
 #Variables
 mypip=$(curl -4 ifconfig.io -s)
-
 az group create -n $rg -l $region1 --output none
 echo Creating On-Prem Site VNETs...
 # Creating On-prem Site1 virtual network
